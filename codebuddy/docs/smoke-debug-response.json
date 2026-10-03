@@ -1,0 +1,30 @@
+﻿{
+    "problem":  "Uninitialized pointer",
+    "severity":  "error",
+    "location":  "head-\u003edata = 10;",
+    "explanation":  "You\u0027re trying to access a member of a pointer that hasn\u0027t been initialized. It\u0027s like trying to read a book before you\u0027ve opened it.",
+    "hint":  "Before using \u0027head\u0027, you need to create a new Node and assign it to \u0027head\u0027.",
+    "concept":  "Pointers must be initialized before use. Use \u0027new\u0027 to allocate memory for a Node.",
+    "fix":  "Node* head = new Node(); head-\u003edata = 10;",
+    "lesson":  "Always initialize pointers before using them. Remember, \u0027new\u0027 allocates memory for a Node.",
+    "deterministic":  {
+                          "source":  "both",
+                          "findings":  [
+                                           "Pointer \u0027head\u0027 is used with \u0027-\u003e\u0027 but appears to be used before allocation/initialization (static heuristic).",
+                                           "Classic beginner pattern: Node* declared, then dereferenced without new/malloc.",
+                                           "An error message was provided, but no line number could be parsed from it."
+                                       ],
+                          "compiler_output":  null,
+                          "executed":  false
+                      },
+    "prior_mistake":  {
+                          "exists":  false,
+                          "summary":  null,
+                          "topic":  null,
+                          "connection":  null,
+                          "mistake_id":  null
+                      },
+    "session_id":  "e26a42098370451aacf30d7f3888ebce",
+    "provider":  "ollama",
+    "model_name":  "qwen2.5-coder:7b"
+}

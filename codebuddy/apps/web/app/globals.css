@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-ink-950 text-slate-100 antialiased;
+}
+
+textarea,
+input,
+select {
+  @apply outline-none;
+}
+
+.card {
+  @apply rounded-xl border border-white/10 bg-white/[0.03] p-4;
+}
+
+.btn-primary {
+  @apply rounded-md bg-accent-500 px-4 py-2 text-sm font-medium text-ink-950 transition hover:bg-accent-400 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply rounded-md border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200 transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.field {
+  @apply w-full rounded-md border border-white/10 bg-ink-900 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500;
+}
